@@ -1,159 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Home</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">  
-	<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
-	<script src="js/cufon-yui.js" type="text/javascript"></script>
-	<script src="js/cufon-replace.js" type="text/javascript"></script>
-	<script src="js/Vegur_500.font.js" type="text/javascript"></script>
-	<script src="js/Ropa_Sans_400.font.js" type="text/javascript"></script> 
-	<script src="js/FF-cash.js" type="text/javascript"></script>	  
-	<script src="js/tms-0.3.js" type="text/javascript"></script>
-	<script src="js/tms_presets.js" type="text/javascript"></script>
-	<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
-	<script src="js/script.js" type="text/javascript"></script>
-	<!--[if lt IE 8]>
-	<div style=' clear: both; text-align:center; position: relative;'>
-		<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-			<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-		</a>
-	</div>
-	<![endif]-->
-	<!--[if lt IE 9]>
- 		<script type="text/javascript" src="js/html5.js"></script>
-		<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
-	<![endif]-->
-</head>
-<body id="page1">
-	<!--==============================header=================================-->
-	<header>
-		<div class="border-bot">
-			<div class="main">
-				<h1><a href="index.html">GlobalTrackingSystem</a></h1>
-				<nav>
-					<ul class="menu">
-						<li><a class="active" href="index.php">Home</a></li>
-						<li><a href="index-1.php">Tiempo real</a></li>
-						<li><a href="index-2.php">Tiempo real con polilinea</a></li>
-					</ul>
-				</nav>
-				<div class="clear"></div>
+<html>
+  <head>
+    <title>Rastreo Satelital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="http://www.example.com/myicon.ico"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"> 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+  <title>Rastreo Satelital</title>
+  <body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Global tracking system</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.php">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Localizacion <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/RastreoSatelital/lochis.php">Historico</a></li>
+            <li><a href="/RastreoSatelital/locrealt.php">Tiempo Real</a></li>
+          </ul>
+        </li>
+<!--        <li><a href="us.php">Nosotros</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+   <div class="container" id="cont">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+     <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+    <!-- Footer -->
+		<footer class="footer-distributed">
+           <div class="container-fluid">
+			<div class="footer-left">
+
+				<h3><img class="footer-image" src="/RastreoSatelital/logo.png" id ="logo"></h3>
+                <p> </p>
+                <p> </p>
+				<p class="footer-company-name">&copy;    Copyright 2016</p>
 			</div>
-		</div>
-		<div class="row-bot">
-			<div class="slider-wrapper">
-				<div class="slider">
-					<ul class="items">
-						<li>
-							<img src="images/slider-img1.jpg" alt="" />
-						</li>
-						<li>
-							<img src="images/slider-img2.jpg" alt="" />
-						</li>
-						<li>
-							<img src="images/slider-img3.jpg" alt="" />
-						</li>
-					</ul>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Universidad del Norte</span> Barranquilla, Colombia</p>
 				</div>
-			</div>
-		</div>
-	</header>
-	<!--==============================content================================-->
-	<!--<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - Mrach 03, 2012!</div>
-		<div class="main">
-			<div class="container_12">
-				<div class="wrapper">
-					<article class="grid_8">
-						<h2>Welcome!</h2>
-						<p class="p2">Internet Cafe is one of <a class="link" href="http://blog.templatemonster.com/free-website-templates/" target="_blank">free website templates</a> created by TemplateMonster.com team. This web template is optimized for 1280X1024 screen resolution. It is also XHTML &amp; CSS valid.</p>
-						<p class="p3">This <a class="link" href="http://blog.templatemonster.com/2012/03/05/free-website-template-jquery-slider-internet-cafe/" target="_blank">Internet Cafe Template</a> goes with two packages – with PSD source files and without them. PSD source files are available for free for the registered members of TemplateMonster.com. The basic package (without PSD source) is available for anyone without registration.</p>
-						<h3 class="p1">Here you can find all services in one place:</h3>
-						<div class="wrapper">
-							<div class="grid_4 alpha">
-								<ul class="list-1">
-									<li><a href="#">Broadband Internet PCs with modern LCD Flat-screens, Printers, Scanners, Webcam</a></li>
-									<li><a href="#">CD-RW/DVD-burner, Multi-card-reader, USB-Connectors</a></li>
-									<li><a href="#">Laptop/Notebook stations with LAN and/or wireless access (10mbps speed)</a></li>
-									<li><a href="#">Rentable Laptop/Notebook cabins. (Daily rent, locked and secured overnight)</a></li>
-									<li><a href="#">Stabilized UPS with world-power outlets, 220V &amp; 110V.</a></li>
-								</ul>
-							</div>
-							<div class="grid_4 omega">
-								<ul class="list-1 indent-bot">
-									<li><a href="#">Outdoor wireless connection available 24/7 (100m radius)</a></li>
-									<li><a href="#">Digital Photo Printer - connect your SD-card, SmartMedia, XD-picture Card, CompactFlash, MemoryStick or mobile phone and print the picture direct at our photo-lab-station (Printpix).<br>
-Of course you can also “unload” your camers and burn CD...</a></li>
-								</ul>
-								<a class="link-1 margin-left" href="#">All Services</a>
-							</div>
-						</div>
-					</article>
-					<article class="grid_4">
-						<div class="indent-top indent-left">
-							<div class="wrapper margin-bot">
-								<figure class="img-indent-r"><a href="#"><img src="images/page1-img1.png" alt=""></a></figure>
-								<div class="extra-wrap">
-									<strong class="title-1">Tell Your<strong>Friends</strong><em>About</em><em>Our Cafe</em></strong>
-								</div>
-							</div>
-							<h3>Latest News</h3>
-							<time class="tdate-1" datetime="2012-02-21">21 February, 2012</time>
-							<p class="prev-indent-bot">Duis autem vel eum iriure dolor in hendrerit tum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer in vulputate velit esse molestie consequat vel illum augue duis dolore.</p>
-							<p><a href="#">Feugiat nulla facilisis at vero eros et accumsan et iusto...</a></p>
-							<a class="link-1" href="#">All News</a>
-						</div>
-					</article>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+57 3004949290</p>
 				</div>
-			</div>
-		</div>
-	</section>-->
-	<!--==============================footer=================================-->
-	<footer>
-		<div class="main">
-			<div class="container_12">
-				<div class="wrapper">
-					<div class="grid_3">
-						<div class="spacer-1">
-							<a href="index.html"><img src="images/logo1.png" alt=""></a>
-						</div>
-					</div>
-					<div class="grid_5">
-						<div class="indent-top2">
-							<p class="prev-indent-bot">&copy; 2016 Proyecto 2 by Cristian Camargo, Gonzalo Duarte y Guido Mercado</p>
-							Phone: +1 800 559 6580 Email: <a href="#">Cristianq@uninorte.edu.co</a>
-						</div>
-					</div>
-					<div class="grid_4">
-						<ul class="list-services">
-							<li><a class="item-1" href="#"></a></li>
-							<li><a class="item-2" href="#"></a></li>
-							<li><a class="item-3" href="#"></a></li>
-							<li><a class="item-4" href="#"></a></li>
-						</ul>
-						<span class="footer-text">&copy; 2016 <a class="link color-2" href="#">Privacy Policy</a></span>
-					</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:dgonzalo@uninorte.edu.co">dgonzalo@uninorte.edu.co</a></p>
 				</div>
+
 			</div>
-		</div>
-	</footer>
-	<script type="text/javascript"> Cufon.now(); </script>
-	<script type="text/javascript">
-		$(window).load(function() {
-			$('.slider')._TMS({
-				duration:1000,
-				easing:'easeOutQuint',
-				preset:'diagonalFade',
-				slideshow:7000,
-				banners:false,
-				pauseOnHover:true,
-				pagination:true,
-				pagNums:false
-			});
-		});
-	</script>
-</body>
+
+			<div class="footer-left">
+
+				<p class="footer-company-about">
+					<span>Acerca de iTrack</span>
+					iTrack una compania de origen colombiano, se encarga del rastreo vehicular en tiempo real destacandose por la confiabilidad y precision.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+            </div>
+		</footer>
+  </body>
 </html>

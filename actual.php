@@ -1,6 +1,9 @@
 <?php
 require("dbinfo.php");
 
+$LatitudGPSS;
+$LongitudGPSS;
+
 function parseToXML($htmlStr)
 {
 $xmlStr=str_replace('<','&lt;',$htmlStr);
@@ -24,27 +27,25 @@ if (!$db_selected) {
 }
 
 // Select all the rows in the markers table
-$query = "SELECT * FROM tabla1 WHERE 1";
+$query = "SELECT * FROM tabla1 ORDER BY id DESC LIMIT 1";
 $result = mysql_query($query);
 if (!$result) {
   die('Invalid query: ' . mysql_error());
 }
-
-header("Content-type: text/xml");
-
-// Start XML file, echo parent node
-echo '<markers>';
-
-// Iterate through the rows, printing XML nodes for each
 while ($row = @mysql_fetch_assoc($result)){
   // ADD TO XML DOCUMENT NODE
-  echo '<marker ';
-  echo 'lat="' . $row['lat'] . '" ';
-  echo 'lng="' . $row['lng'] . '" ';
-  echo '/>';
-}	
+    $LatitudGPSS=$row['lat'];
+    $LongitudGPSS=$row['lng'];
+}
 
-// End XML file
-echo '</markers>';
 
 ?>
+
+<script type="text/javascript">
+    
+    var LatitudGPSS=<?php echo json_encode($LatitudGPSS);?>;
+    var LongitudGPSS=<?php echo json_encode($LongitudGPSS);?>;
+
+</script>
+        
+        

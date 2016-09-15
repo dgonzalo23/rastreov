@@ -12,7 +12,7 @@ return $xmlStr;
 }
 
 // Opens a connection to a MySQL server
-$connection=mysql_connect ($servername, $username, $password);
+$connection=mysql_connect ($servername, $username);
 if (!$connection) {
   die('Not connected : ' . mysql_error());
 }
@@ -24,7 +24,7 @@ if (!$db_selected) {
 }
 
 // Select all the rows in the markers table
-$query = "SELECT * FROM tabla1 WHERE 1";
+$query = "SELECT * FROM tabla2 ORDER BY id DESC LIMIT 1";
 $result = mysql_query($query);
 if (!$result) {
   die('Invalid query: ' . mysql_error());
@@ -41,8 +41,11 @@ while ($row = @mysql_fetch_assoc($result)){
   echo '<marker ';
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
+  echo 'fechahora="' . $row['fechahora'] . '" ';
+  echo 'evento="' . $row['evento'] . '" ';
+//  echo 'hora="' . $row['hora'] . '" ';
   echo '/>';
-}	
+}
 
 // End XML file
 echo '</markers>';

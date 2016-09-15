@@ -1,4 +1,5 @@
 <?php
+
 require("dbinfo.php");
 
 function parseToXML($htmlStr)
@@ -24,9 +25,13 @@ if (!$db_selected) {
 }
 
 // Select all the rows in the markers table
-$query = "SELECT * FROM tabla1 WHERE 1";
+$fechainicial = $_POST["datetimepicker6"];
+$fechafinal = $_POST["datetimepicker7"];
+#$horainicial = $_POST["datetimepicker8"];
+#$horafinal= $_POST["datetimepicker9"];
+$query = "SELECT * FROM rastreo WHERE (fechahora BETWEEN '$fechainicial' AND '$fechafinal')";
 $result = mysql_query($query);
-if (!$result) {
+if (!$result) {  
   die('Invalid query: ' . mysql_error());
 }
 
@@ -36,15 +41,28 @@ header("Content-type: text/xml");
 echo '<markers>';
 
 // Iterate through the rows, printing XML nodes for each
-while ($row = @mysql_fetch_assoc($result)){
+//while ($row = @mysql_fetch_assoc($result)){
   // ADD TO XML DOCUMENT NODE
   echo '<marker ';
-  echo 'lat="' . $row['lat'] . '" ';
-  echo 'lng="' . $row['lng'] . '" ';
+//  echo 'lat="' . $row['lat'] . '" ';
+//  echo 'lng="' . $row['lng'] . '" ';
+//  echo 'datetime="' . $row['fechahora'] . '" ';
+    echo 'lat="11.01946" ';
+    echo 'lng="-74.85147" ';
   echo '/>';
-}	
+  echo '<marker ';
+//  echo 'lat="' . $row['lat'] . '" ';
+//  echo 'lng="' . $row['lng'] . '" ';
+//  echo 'datetime="' . $row['fechahora'] . '" ';
+    echo 'lat="11.01986" ';
+    echo 'lng="-74.85177" ';
+  echo '/>';
+//(})
 
 // End XML file
 echo '</markers>';
+
+//header('Location: lochis.php');
+//exit();
 
 ?>
